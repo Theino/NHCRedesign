@@ -1,0 +1,59 @@
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.pink {
+    background: pink;
+}
+
+.teal {
+    background: teal;
+}
+
+.aqua {
+    background: aqua;
+}
+
+.white {
+    background: white;
+}
+
+.lightGray {
+    background: #D3D3D3;
+}
+
+.blackBorder {
+    border-style: solid;
+}
+
+
+/* real stuff */
+
+.topBar {
+    padding-left: 20px;
+}
+
+.bottomLinks {
+    color: black;
+    font-weight: bold;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.logo {
+    font-family: 'Cambria', cursive;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+figcaption {
+    padding-left: 20px;
+}
