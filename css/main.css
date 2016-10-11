@@ -33,6 +33,15 @@
 
 /* real stuff */
 
+.topTitle {
+    font-family: 'Cambria', cursive;
+    text-align: center;
+}
+
+.topSubTitle {
+    text-align: center;
+}
+
 .topBar {
     padding-left: 20px;
 }
@@ -44,10 +53,6 @@
 
 pre {
     white-space: pre-wrap;
-}
-
-.logo {
-    font-family: 'Cambria', cursive;
 }
 
 figure img {
