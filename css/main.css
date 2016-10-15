@@ -1,10 +1,7 @@
-.red {
-    background: red;
+.mainMenu {
+    background: #0099D8;
 }
 
-.green {
-    background: green;
-}
 
 .pink {
     background: pink;
@@ -12,14 +9,6 @@
 
 .teal {
     background: teal;
-}
-
-.aqua {
-    background: aqua;
-}
-
-.white {
-    background: white;
 }
 
 .lightGray {
@@ -49,10 +38,6 @@
 .bottomLinks {
     color: black;
     font-weight: bold;
-}
-
-pre {
-    white-space: pre-wrap;
 }
 
 figure img {
