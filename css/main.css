@@ -16,6 +16,10 @@
     text-align: center;
 }
 
+.sidebar-nav li a:hover {
+    background: #0A4595;
+}
+
 .row {
     padding: 0px;
     margin: 0px;
