@@ -47,7 +47,7 @@ body, html, container {
     
 }
 
-#sideBarList
+.sideBarList
 {
     position: absolute;
     margin: 0px;
@@ -55,7 +55,7 @@ body, html, container {
     width: 100%;
 }
 
-#sideBarList > li > a {
+.sideBarList > li > a {
     padding-top: 13px;
     padding-left: 15px;
 }
@@ -110,3 +110,4 @@ footer {
 figure img {
     width: 100%;
 }
+
