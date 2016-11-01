@@ -10,23 +10,6 @@ Main Components
         background-color: #0099D8;
     }
     
-    .cd-dropdown-trigger::before {
-        right: 22px;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-    
-    .cd-dropdown-trigger::after {
-        right: 17px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
     
     .cd-dropdown-trigger {
         font-size: 1.5rem;
