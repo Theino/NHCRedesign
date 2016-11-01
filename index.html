@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 
 <head>
     <title>National Hurricane Site</title>
@@ -8,12 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="mega-dropdown/css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="mega-dropdown/css/style.css">
+    <!-- Resource style -->
+    <script src="mega-dropdown/js/modernizr.js"></script>
+    <!-- Modernizr -->
 </head>
 
 <body>
     <div class="container">
         <div class="row blackBorder">
-            <header class="col-xs-12 white">
+            <header class="row col-xs-12 white">
                 <div class="topBar"> <a href="index.html"><h1 class="topTitle">National Hurricane Center</h1></a>
                     <p class="topSubTitle">Your place for hurricane information</p>
                 </div>
@@ -28,13 +34,17 @@
                         <li><a id="archives">ARCHIVES</a> </li>
                         <li><a id="aboutNHC">ABOUT NHC</a> </li>
                         <li><a id="search">SEARCH</a> </li>
-                        <li class="has-children sidebar-nav col-xs-2 noFloat sideBarList">
-                            <a href="#">CLOTHING</a>
-                            <ul class="dropdown-menu ">
-                                <li><a href="#">HTML</a> </li>
-                                <li><a href="#">CSS</a> </li>
-                                <li><a href="#">JavaScript</a> </li>
-                            </ul>
+                        <li class="has-children">
+                            <div class="cd-dropdown-wrapper"> <a class="cd-dropdown-trigger" href="#0">Dropdown</a>
+                                <nav class="cd-dropdown">
+                                    <h2>Title</h2> <a href="#0" class="cd-close">Close</a>
+                                    <ul class="cd-dropdown-content">
+                                        <li><a href="#">HTML</a> </li>
+                                        <li><a href="#">CSS</a> </li>
+                                        <li><a href="#">JavaScript</a> </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </li>
                     </ul>
                 </nav>
@@ -57,27 +67,10 @@
     </div>
     </div>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var menuItems = ["forecasts", "dataTools", "educational", "archives", "aboutNHC", "search"];
-        var prepend = "a";
-        $(function () {
-            $('.forecasts').on('click', null, function () {
-                alert('this is the click');
-            });
-        });
-        for (var i = 0; i < menuItems.length; i++) {
-            $('.' + menuItems[i]).on('click', null, function () {
-                showSubMenu(prepend + menuItems[i]);
-            });
-        }
-
-        function showSubMenu(mainMenuName) {
-            //for (var i = 0; i < menuItems.length; i++) {
-            //    document.getElementById(menuItems[i]).style.visibility = "hidden";
-            //}
-            $('#aforecasts').style.visibility = "visible";
-        }
-    </script>
+    <script src="mega-dropdown/js/jquery-2.1.1.js"></script>
+    <script src="mega-dropdown/js/jquery.menu-aim.js"></script>
+    <!-- menu aim -->
+    <script src="mega-dropdown/js/main.js"></script>
 </body>
 
 </html>
