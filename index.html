@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="mega-dropdown/css/reset.css">
     <!-- CSS reset -->
     <link rel="stylesheet" href="mega-dropdown/css/style.css">
     <!-- Resource style -->
+    <link rel="stylesheet" href="css/main.css">
     <script src="mega-dropdown/js/modernizr.js"></script>
     <!-- Modernizr -->
 </head>
@@ -34,17 +35,13 @@
                         <li><a id="archives">ARCHIVES</a> </li>
                         <li><a id="aboutNHC">ABOUT NHC</a> </li>
                         <li><a id="search">SEARCH</a> </li>
-                        <li class="has-children">
-                            <div class="cd-dropdown-wrapper"> <a class="cd-dropdown-trigger" href="#0">Dropdown</a>
-                                <nav class="cd-dropdown">
-                                    <h2>Title</h2> <a href="#0" class="cd-close">Close</a>
-                                    <ul class="cd-dropdown-content">
-                                        <li><a href="#">HTML</a> </li>
-                                        <li><a href="#">CSS</a> </li>
-                                        <li><a href="#">JavaScript</a> </li>
-                                    </ul>
-                                </nav>
-                            </div>
+                        <li class="has-children"><a href="#0">MENU</a>
+                            <ul class="cd-dropdown fade-out cd-dropdown-trigger">
+                                
+                                <li><a href="#">HTML</a> </li>
+                                <li><a href="#">CSS</a> </li>
+                                <li><a href="#">JavaScript</a> </li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>

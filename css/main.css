@@ -55,7 +55,7 @@ body, html, container {
     width: 100%;
 }
 
-.sideBarList > li > a {
+.sideBarList li a {
     padding-top: 13px;
     padding-left: 15px;
 }
