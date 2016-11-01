@@ -103,11 +103,13 @@ footer {
 }
 
 .bottomLinks {
-    color: black;
+    color: black
     font-weight: bold;
 }
 
 figure img {
+    position: relative;
+    z-index: 0;
     width: 100%;
 }
 

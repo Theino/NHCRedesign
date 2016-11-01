@@ -20,18 +20,8 @@ Main Components
         -moz-osx-font-smoothing: grayscale;
     }
     
-    .cd-dropdown-trigger {
-        display: block;
-        position: relative;
-        padding: 0 36px 0 20px;
-        line-height: 40px;
-        background-color: #111433;
-        color: #ffffff;
-        border-radius: 3px;
-    }
-    
     .no-touch .cd-dropdown-trigger:hover {
-        background-color: #171b46;
+        background-color: #0099D8;
     }
     
     .cd-dropdown-trigger::before {
@@ -57,44 +47,32 @@ Main Components
     }
     
     .cd-dropdown-trigger.dropdown-is-active {
-        background-color: #3f8654;
+        background-color: #0099D8;
+        position: static;
+        top: 200px;
+        left: 100px;
     }
     
     .no-touch .cd-dropdown-trigger.dropdown-is-active:hover {
-        background-color: #47975f;
-    }
-    
-    .cd-dropdown-trigger.dropdown-is-active::before,
-    .cd-dropdown-trigger.dropdown-is-active::after {
-        /* transform the arrow into a 'X' */
-        width: 14px;
-    }
-    
-    .cd-dropdown-trigger.dropdown-is-active::before {
-        /* transform the arrow into a 'X' */
-        -webkit-transform: translateX(5px) rotate(-45deg);
-        -moz-transform: translateX(5px) rotate(-45deg);
-        -ms-transform: translateX(5px) rotate(-45deg);
-        -o-transform: translateX(5px) rotate(-45deg);
-        transform: translateX(5px) rotate(-45deg);
-    }
-    
-    .cd-dropdown-trigger.dropdown-is-active::after {
-        /* transform the arrow into a 'X' */
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
+        background-color: #0099D8;
     }
     
     .cd-dropdown {
         position: absolute;
-        -webkit-transform: translateZ(0);
+        opacity: 0;
+        left: 0px;
+        top: 0px;
+        background: #0099D8;
+        /*-webkit-transform: translateZ(0);
         -moz-transform: translateZ(0);
         -ms-transform: translateZ(0);
         -o-transform: translateZ(0);
         transform: translateZ(0);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        transform: translateX(-100%);
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
@@ -103,72 +81,30 @@ Main Components
         -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0.5s;
         -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0.5s;
         transition: transform 0.5s 0s, visibility 0s 0.5s;
-        left: 150px;
-        height: auto;
-    }
-    
-    .cd-dropdown .cd-close::after {
-        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    }
-    
-    .cd-dropdown .cd-close::before {
-        -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-        -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-        -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-        -o-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+        
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+        -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
+        transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;*/
+        height: 100%;
+        width: 100%;
     }
     
     .cd-dropdown.dropdown-is-active {
         visibility: visible;
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
+        opacity: 1;
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        transform: translateX(100%);
+        
+        z-index: 100;
+
         -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0s;
         -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0s;
         transition: transform 0.5s 0s, visibility 0s 0s;
     }
     
-    .cd-dropdown .cd-close {
-        top: 5px;
-    }
-    
-    .cd-dropdown {
-        position: absolute;
-        top: calc(100% - 2px);
-        /* reset style*/
-        height: auto;
-        width: auto;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
-        background-color: #ffffff;
-        color: #111433;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        -webkit-transform: translateY(30px);
-        -moz-transform: translateY(30px);
-        -ms-transform: translateY(30px);
-        -o-transform: translateY(30px);
-        transform: translateY(30px);
-        -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
-        -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
-        transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
-    }
-    
-    .open-to-left .cd-dropdown {
-        /* use the .open-to-left class if you want to open the dropdown on the left */
-        right: 0;
-        left: auto;
-    }
     
     .cd-dropdown h2,
     .cd-dropdown .cd-close {
@@ -176,22 +112,10 @@ Main Components
         display: none;
     }
     
-    .cd-dropdown.dropdown-is-active {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
-        -webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
-        -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;
-        transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;
-    }
-    
     .cd-dropdown-content,
     .cd-dropdown-content ul {
         position: absolute;
-        top: 0;
+        top: 0px;
         left: 150px;
         width: 100%;
         height: 100%;
