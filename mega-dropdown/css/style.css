@@ -6,20 +6,6 @@ Main Components
 
 -------------------------------- */
     
-    header {
-        height: 100px;
-        background: #ffffff;
-    }
-    
-    .cd-dropdown-wrapper {
-        display: inline-block;
-        position: relative;
-        height: 40px;
-        margin: 30px 0 0 5%;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
     .no-touch .cd-dropdown-trigger:hover {
         background-color: #0099D8;
     }
@@ -48,9 +34,8 @@ Main Components
     
     .cd-dropdown-trigger.dropdown-is-active {
         background-color: #0099D8;
-        position: static;
-        top: 200px;
-        left: 100px;
+        margin-left: 3px;
+        
     }
     
     .no-touch .cd-dropdown-trigger.dropdown-is-active:hover {
@@ -97,6 +82,8 @@ Main Components
         -ms-transform: translateX(100%);
         -o-transform: translateX(100%);
         transform: translateX(100%);
+        
+        
         
         z-index: 100;
 
