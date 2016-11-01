@@ -11,14 +11,6 @@ jQuery(document).ready(function($){
 		toggleNav();
 	});
 
-	//on mobile - open submenu
-	$('.has-children').children('a').on('click', function(event){
-		//prevent default clicking on direct children of .has-children 
-		event.preventDefault();
-		var selected = $(this);
-		selected.next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('move-out');
-	});
-
 	//on desktop - differentiate between a user trying to hover over a dropdown item vs trying to navigate into a submenu's contents
 	var submenuDirection = ( !$('.cd-dropdown-wrapper').hasClass('open-to-left') ) ? 'right' : 'left';
 	$('.cd-dropdown-content').menuAim({
@@ -58,29 +50,5 @@ jQuery(document).ready(function($){
 				$('.is-active').removeClass('is-active');
 			});	
 		}
-	}
-
-	//IE9 placeholder fallback
-	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
-	if(!Modernizr.input.placeholder){
-		$('[placeholder]').focus(function() {
-			var input = $(this);
-			if (input.val() == input.attr('placeholder')) {
-				input.val('');
-		  	}
-		}).blur(function() {
-		 	var input = $(this);
-		  	if (input.val() == '' || input.val() == input.attr('placeholder')) {
-				input.val(input.attr('placeholder'));
-		  	}
-		}).blur();
-		$('[placeholder]').parents('form').submit(function() {
-		  	$(this).find('[placeholder]').each(function() {
-				var input = $(this);
-				if (input.val() == input.attr('placeholder')) {
-			 		input.val('');
-				}
-		  	})
-		});
 	}
 });
