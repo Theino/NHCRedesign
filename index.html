@@ -12,62 +12,57 @@
     <link rel="stylesheet" href="mega-dropdown/css/style.css">
     <!-- Resource style -->
     <link rel="stylesheet" href="css/main.css">
-    <script src="mega-dropdown/js/modernizr.js"></script>
     <!-- Modernizr -->
+    <script src="mega-dropdown/js/modernizr.js"></script>
+    <script src="mega-dropdown/js/main.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="row blackBorder">
-            <header class="row col-xs-12 white">
-                <div class="topBar"> <a href="index.html"><h1 class="topTitle">National Hurricane Center</h1></a>
-                    <p class="topSubTitle">Your place for hurricane information</p>
-                </div>
-            </header>
-            <div class="row col-xs-12 col-md-12 col-lg-12">
-                <!--                <div class="col-xs-4 noFloat">-->
-                <nav class="sidebar-nav col-xs-2 noFloat">
-                    <ul class="sidebar-nav noFloat sideBarList">
-                        <li><a class="forecasts" id="forecasts" href="#">FORECASTS</a> </li>
-                        <li><a id="dataTools">DATA TOOLS</a> </li>
-                        <li><a id="educational">EDUCATIONAL</a> </li>
-                        <li><a id="archives">ARCHIVES</a> </li>
-                        <li><a id="aboutNHC">ABOUT NHC</a> </li>
-                        <li><a id="search">Archives</a> 
-                            <div class="cd-dropdown">
-                                <ul class="fade-out">
+        <header>
+            <div class="topBar"> <a href="index.html"><h1 class="topTitle">National Hurricane Center</h1></a>
+                <p class="topSubTitle">Your place for hurricane information</p>
+            </div>
+            <div class="row blackBorder cd-dropdown-wrapper col-xs-4"> <a class="cd-dropdown-trigger sidebar-nav noFloat" href="#">DropDown</a>
+                <nav class="cd-dropdown sidebar-nav noFloat">
+                        <!--                <div class="col-xs-4 noFloat">-->
+                        <ul class="sidebar-nav noFloat sideBarList cd-dropdown-content">
+                            <!--<li><a class="forecasts" id="forecasts" href="#">FORECASTS</a> </li>
+                            <li><a id="dataTools">DATA TOOLS</a> </li>
+                            <li><a id="educational">EDUCATIONAL</a> </li>
+                            <li><a id="archives">Archives</a> </li>
+                            <li><a id="aboutNHC">About</a> </li>-->
+                            <li class="has-children cd-dropdown-trigger"><a href="#">Archives</a>
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">OTHER</a></li>
+                                    <li class="see-all"><a href="#">All Clothing</a></li>
                                     <li><a href="#">Data</a> </li>
                                     <li><a href="#">Outlooks</a> </li>
                                     <li><a href="#">Season Summary</a> </li>
                                 </ul>
-                            </div>
-                        </li>
-                        <li class="has-children cd-dropdown-trigger"><a href="#">Maps</a>
-                            <div class="cd-dropdown">
-                                <ul class="fade-out">
+                            </li>
+                            <li class="has-children cd-dropdown-trigger"><a href="#">Maps</a>
+                                <ul class="is-hidden">
+                                    <li class="go-back"><a href="#0">Menu</a></li>
+                                    <li class="see-all"><a href="#">All Clothing</a></li>
                                     <li><a href="#">Satellite</a> </li>
                                     <li><a href="#">Radar</a> </li>
                                     <li><a href="#">Composite</a> </li>
                                 </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
                 </nav>
-                <figure class="col-xs-8 noFloat"> <img src="images/map.png" alt="No Hurricanes!"> </figure>
             </div>
-            <footer class="row col-xs-12 col-md-12 col-lg-12">
-                <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="http://www.commerce.gov/" class="bottomLinks">US Dept of Commerce</a></div>
-                <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="http://www.noaa.gov/" class="bottomLinks">National Oceanic and Atmospheric Administration</a></div>
-                <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="#" class="bottomLinks">About Us</a></div>
-            </footer>
-        </div>
+            <figure class="col-xs-8 noFloat"> <img src="images/map.png" alt="No Hurricanes!"> </figure>
+        </header>
+        <footer class="row col-xs-12 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="http://www.commerce.gov/" class="bottomLinks">US Dept of Commerce</a></div>
+            <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="http://www.noaa.gov/" class="bottomLinks">National Oceanic and Atmospheric Administration</a></div>
+            <div class="col-xs-12 col-md-4 footerDiv" align="center"><a href="#" class="bottomLinks">About Us</a></div>
+        </footer>
     </div>
-    </div>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="mega-dropdown/js/jquery-2.1.1.js"></script>
     <script src="mega-dropdown/js/jquery.menu-aim.js"></script>
     <!-- menu aim -->
-    <script src="mega-dropdown/js/main.js"></script>
 </body>
 
 </html>
